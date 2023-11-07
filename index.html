@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+        <div class="container_body">
+            <input type="text" id="inp_menu" readonly placeholder=" Calculator">
+            <div class="main_menu">
+                <button onclick="currentDisplay='';
+                document.querySelector('#inp_menu').value = currentDisplay;">C</button>
+                <button onclick="currentDisplay= currentDisplay + '%';
+                document.querySelector('#inp_menu').value = currentDisplay;">%</button>
+                <button onclick=backspace()>⌫ </button>
+                <button onclick="currentDisplay= currentDisplay + '/';
+                document.querySelector('#inp_menu').value = currentDisplay;">/</button>
+                <button onclick="currentDisplay= currentDisplay + '7';
+                document.querySelector('#inp_menu').value = currentDisplay;">7</button>
+                <button onclick="currentDisplay= currentDisplay + '8';
+                document.querySelector('#inp_menu').value = currentDisplay;">8</button>
+                <button onclick="currentDisplay= currentDisplay + '9';
+                document.querySelector('#inp_menu').value = currentDisplay;">9</button>
+                <button onclick="currentDisplay= currentDisplay + '*';
+                document.querySelector('#inp_menu').value = currentDisplay;">*</button>
+                <button onclick="currentDisplay= currentDisplay + '4';
+                document.querySelector('#inp_menu').value = currentDisplay;">4</button>
+                <button onclick="currentDisplay= currentDisplay + '5';
+                document.querySelector('#inp_menu').value = currentDisplay;">5</button>
+                <button onclick="currentDisplay= currentDisplay + '6';
+                document.querySelector('#inp_menu').value = currentDisplay;">6</button>
+                <button onclick="currentDisplay= currentDisplay + '-';
+                document.querySelector('#inp_menu').value = currentDisplay;">-</button>
+                <button onclick="currentDisplay= currentDisplay + '1';
+                document.querySelector('#inp_menu').value = currentDisplay;">1</button>
+                <button onclick="currentDisplay= currentDisplay + '2';
+                document.querySelector('#inp_menu').value = currentDisplay;">2</button>
+                <button onclick="currentDisplay= currentDisplay + '3';
+                document.querySelector('#inp_menu').value = currentDisplay;">3</button>
+                <button onclick="currentDisplay= currentDisplay + '+';
+                document.querySelector('#inp_menu').value = currentDisplay;">+</button>
+                <button onclick="currentDisplay= currentDisplay + '0';
+                document.querySelector('#inp_menu').value = currentDisplay;">0</button>
+                <button onclick="currentDisplay= currentDisplay + '00';
+                document.querySelector('#inp_menu').value = currentDisplay;">00</button>
+                <button onclick="currentDisplay= currentDisplay + '.';
+                document.querySelector('#inp_menu').value = currentDisplay;">.</button>
+                <button onclick=" let result = eval(currentDisplay)
+                currentDisplay= result;
+                document.querySelector('#inp_menu').value = currentDisplay;">=</button>
+            </div>
+        </div>
+     </div>
+<script>
+       let currentDisplay = "";
+       document.querySelector('#inp_menu').value = currentDisplay;
+
+function backspace()
+{
+var currentDisplay = document.getElementById("inp_menu").value; document.getElementById("inp_menu").value=currentDisplay.substring(0,currentDisplay.length-1);
+// pm = currentDisplay.slice(0,-1); document.getElementById("inp_menu").value=pm ;
+// var currentDisplay = inp_menu.value;
+// inp_menu.value = currentDisplay.slice(0, -1);
+}
+
+
+
+</script>
+</body>
+</html>
